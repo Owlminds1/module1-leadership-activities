@@ -11,7 +11,36 @@ const allTasksData = [
   { id: "task6", text: "Invite friends and family for party" }
 ];
 
+
+// "Low Effort - High Impact
+// Exercise for 30 mins
+// Use stairs instead of lift
+
+// High effort - Low Impact
+// Get exercise equipment
+// Coaching from instructor
+
+// Low effort - Low Impact
+// Walk to school
+
+// High effort - High impact
+
+// Join the best fitness in town class and attend it every week."
+
+
 const correctPlacement = {
+  task1: "Low-Eff-High-Imp", //Order a cake 
+  task2: "Low-Effort-Low-Imp", //Choose party hats
+  task3: "High-Eff-High-Imp",//Do all household chores
+  task4: "High-Eff-Low-Imp",//Arrange transportation for guests
+  task5: "Low-Eff-High-Imp",//Make a birthday card
+  task6: "High-Eff-High-Imp",//Invite friends and family for party
+};
+
+
+
+
+const correctPlacement_v1 = {
   task1: "Low-Eff-High-Imp", //Order a cake 
   task2: "Low-Effort-Low-Imp", //Choose party hats
   task3: "High-Eff-High-Imp",//Do all household chores

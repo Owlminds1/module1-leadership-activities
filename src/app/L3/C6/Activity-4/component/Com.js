@@ -14,8 +14,28 @@ const allTasksData = [
   { id: "task9", text: "Study for tomorrow’s test" }
 ];
 
+// "Important, urgent
+// Hand in an assignment that’s due
+// Study for tomorrow’s test
+
+
+// Important, not urgent
+// Regular exercise
+// Study for next month’s test
+
+
+// Not important, urgent
+// Respond to messages
+
+
+// Not important, not urgent
+// Pizza party
+// Vacation
+// Calls with friends"
+
+
 const correctPlacement = {
-  task1: "urgent-important", // Eat breakfast
+  task1: "urgent-important", // Eat breakfast ~
   task2: "not-urgent-important", // Regular exercise
   task3: "not-urgent-important", // Take vaccination
   task4: "not-urgent-not-important", // Long phone call with a friend
