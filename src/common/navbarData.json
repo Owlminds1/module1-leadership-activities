@@ -10,10 +10,6 @@
             "Activity 2": {
                 "link": "/L1/C1/Activity-2",
                 "name": "Fixed Sequencing"
-            },
-            "Activity 4": {
-                "link": "/L1/C1/Activity-4",
-                "name": "Decision tree"
             }
         },
         "C2": {
@@ -84,6 +80,10 @@
             "Activity 3": {
                 "link": "/L1/C6/Activity-3",
                 "name": "Good choice, bad choice"
+            },
+            "Activity 4": {
+                "link": "/L1/C6/Activity-4",
+                "name": "Decision tree"
             }
         },
         "C7": {

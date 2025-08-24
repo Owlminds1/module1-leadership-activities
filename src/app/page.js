@@ -5,7 +5,7 @@ import data from "@/common/navbarData.json";
 export default function Home() {
   return (
     <div>
-      <h1 className="mainHeading_m text-center">Module V</h1>
+      <h1 className="mainHeading_m text-center">Module I</h1>
       <hr />
       <div className="p-4 div_m">
         <ul className="list-disc list-inside">

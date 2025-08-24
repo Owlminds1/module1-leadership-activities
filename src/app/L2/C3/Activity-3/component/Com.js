@@ -5,12 +5,12 @@ import React, { useState, useEffect } from "react";
 const allTasksData = [
   { id: "task1", text: "Feed the hungry animals" },
   { id: "task2", text: "Refill water bowls" },
-  { id: "task3", text: "Clean the cages" },
+  { id: "task3", text: "Clean the living spaces" },
   { id: "task4", text: "Sort donations" },
-  { id: "task5", text: "Play with the animals" },
-  { id: "task6", text: "Sweep the shelter floor" },
-  { id: "task7", text: "Put up adoption posters" },
-  { id: "task8", text: "Decorate the shelter with balloons" },
+  { id: "task5", text: "Play with the different species" },
+  { id: "task6", text: "Sweep the floor" },
+  { id: "task7", text: "Put up posters of sensibility" },
+  { id: "task8", text: "Decorate the space" },
 ];
 
 const correctPlacement = {
