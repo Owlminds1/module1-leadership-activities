@@ -1,24 +1,29 @@
 "use client";
 
 import React, { useState } from "react";
+import SunGlases from "../assets/sunGlases.jpeg";
+import Image from "next/image";
 
 const images = [
   "https://res.cloudinary.com/dey9w5okl/image/upload/v1735651305/486d3d2d-925b-405e-9721-4f5a3046a9e7_ffkndx.jpg",
   "https://res.cloudinary.com/dey9w5okl/image/upload/v1735651305/7d0b1e6d-4c0e-4e6e-a8ea-81688b723e4e_hnh3gk.jpg",
   "https://res.cloudinary.com/dey9w5okl/image/upload/v1735651306/ef77fd68-e9f2-4d98-ab90-07b77853a4ed_e8kj2z.jpg",
+  SunGlases,
 ];
 
 export default function Com() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   const goToPrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   const goToSlide = (index) => {
@@ -34,15 +39,24 @@ export default function Com() {
         >
           {images.map((src, index) => (
             <div key={index} className="w-full flex-shrink-0">
-              <img
-                src={src}
-                className="block w-full h-auto object-cover"
-                alt={`Slide ${index + 1}`}
-              />
+              {index < 3 ? (
+                <img
+                  src={src}
+                  className="block w-full h-auto object-cover"
+                  alt={`Slide ${index + 1}`}
+                />
+              ) : (
+                <Image
+                  src={src}
+                  className="block w-full h-auto object-cover"
+                  alt={`Slide ${index + 1}`}
+                />
+              )}
             </div>
           ))}
         </div>
 
+        {/* Dots */}
         <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
           {images.map((_, index) => (
             <button
@@ -56,46 +70,53 @@ export default function Com() {
           ))}
         </div>
 
-        <button
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full cursor-pointer hover:bg-opacity-75 transition-opacity duration-300"
-          onClick={goToPrev}
-          aria-label="Previous slide"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        {/* Prev Button */}
+        {currentIndex > 0 && (
+          <button
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full cursor-pointer hover:bg-opacity-75 transition-opacity duration-300"
+            onClick={goToPrev}
+            aria-label="Previous slide"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full cursor-pointer hover:bg-opacity-75 transition-opacity duration-300"
-          onClick={goToNext}
-          aria-label="Next slide"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+        )}
+
+        {/* Next Button */}
+        {currentIndex < images.length - 1 && (
+          <button
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full cursor-pointer hover:bg-opacity-75 transition-opacity duration-300"
+            onClick={goToNext}
+            aria-label="Next slide"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );

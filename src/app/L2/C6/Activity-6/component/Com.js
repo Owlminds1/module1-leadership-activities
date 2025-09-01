@@ -4,19 +4,22 @@ import React, { useState, useEffect } from "react";
 
 const allTasksData = [
   { id: "task1", text: "Exercise for 30 mins" },
-  { id: "task2", text: "Get exercise eqsuipment" },
-  { id: "task3", text: "Coaching from tuition instructor" },
-  { id: "task4", text: "Walk to school" }
+  { id: "task2", text: "Get exercise equipment" },
+  { id: "task3", text: "Coaching from instructor" },
+  { id: "task4", text: "Walk to school" },
+  { id: "task5", text: "Use stairs instead of lift" },
+  { id: "task6", text: "Join the best fitness in town class and attend it every week." },
 ];
 
 const correctPlacement = {
   task1: "low-effort-high-impact",
   task2: "high-effort-low-impact",
-  task3: "high-effort-high-impact",
+  task3: "high-effort-low-impact",
   task4: "low-effort-low-impact",
+  task5: "low-effort-high-impact",
+  task6: "high-effort-high-impact",
+
 };
-
-
 
 const quadrantsData = [
   { id: "low-effort-high-impact", name: "Low Effort-High Impact", bgColor: "bg-red-100", borderColor: "border-red-400" },
@@ -133,9 +136,9 @@ const TaskSortingPuzzle = () => {
       <p className={`text-2xl text-center mb-8 font-medium ${resultColor}`}>
         {resultMessage}
         <br />
-        <p className="mt-[6px]">
+        <span className="mt-[6px]">
           Evaluate the effort required with the impact of an action.
-        </p>
+        </span>
       </p>
 
       <div id="game-container" className="flex flex-col lg:flex-row gap-8 w-full items-start justify-center">

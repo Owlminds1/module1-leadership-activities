@@ -6,22 +6,29 @@ const allTasksData = [
   { id: "task1", text: "Eat breakfast" },
   { id: "task2", text: "Regular exercise" },
   { id: "task3", text: "Take vaccination" },
-  { id: "task4", text: "Long phone call with a friend" },
+  { id: "task4", text: "Calls with friends" },
   { id: "task5", text: "Study for next month’s test" },
   { id: "task6", text: "Pizza party" },
-  { id: "task7", text: "Responds to chat messages" },
+  { id: "task7", text: "Responds to messages" },
   { id: "task8", text: "Vacation" },
   { id: "task9", text: "Study for tomorrow’s test" }
 ];
 
+
+// Not important, not urgent
+// Pizza party
+// Vacation
+// Calls with friends"
+
+
 const correctPlacement = {
-  task1: "urgent-important", // Eat breakfast
+  task1: "urgent-important", // Eat breakfast ~
   task2: "not-urgent-important", // Regular exercise
   task3: "not-urgent-important", // Take vaccination
-  task4: "not-urgent-not-important", // Long phone call with a friend
+  task4: "not-urgent-not-important", // Calls with friends
   task5: "not-urgent-important", // Study for next month’s test
   task6: "not-urgent-not-important", // Pizza party
-  task7: "urgent-not-important", // Responds to chat messages
+  task7: "urgent-not-important", // Responds to messages
   task8: "not-urgent-not-important", // Vacation
   task9: "urgent-important", // Study for tomorrow’s test
 };

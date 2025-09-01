@@ -80,6 +80,10 @@
             "Activity 3": {
                 "link": "/L1/C6/Activity-3",
                 "name": "Good choice, bad choice"
+            },
+            "Activity 4": {
+                "link": "/L1/C6/Activity-4",
+                "name": "Decision tree"
             }
         },
         "C7": {
