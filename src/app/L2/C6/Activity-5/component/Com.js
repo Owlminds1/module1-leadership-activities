@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+import S1 from "../assets/S1.png";
+import S2 from "../assets/S21.png";
+import S3 from "../assets/S3.png";
 
 const images = [
-  "https://res.cloudinary.com/dey9w5okl/image/upload/v1735650851/Decision_Clothes.drawio_vrrd5d.png",
-  "https://res.cloudinary.com/dey9w5okl/image/upload/v1735639240/unnamed_3_rcy96c.png",
-  "https://res.cloudinary.com/dey9w5okl/image/upload/v1735640007/FoodChoices_clgkgi.jpg",
+  S1,
+  S2,
+  S3,
 ];
 
 export default function Com() {
@@ -19,7 +23,7 @@ export default function Com() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="container flex flex-col justify-between items-center w-full h-full max-w-3xl">
         <h1 className="text-3xl mb-4">Flow Chart</h1>
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
           className="max-w-full max-h-full border-2 border-gray-300 rounded-lg shadow-md"
