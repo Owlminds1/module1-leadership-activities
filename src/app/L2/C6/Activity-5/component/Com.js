@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import S1 from "../assets/S1.png";
-import S2 from "../assets/S21.png";
-import S3 from "../assets/S3.png";
+import S1 from "../assets/s1.png";
+import S2 from "../assets/s21.png";
+import S3 from "../assets/s3.png";
 
 const images = [
   S1,
